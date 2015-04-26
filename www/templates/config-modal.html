@@ -1,0 +1,25 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Configuration</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeConfig()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="commitConfig()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Server Address</span>
+          <input type="text" ng-model="config.serverAddress">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Auth Token</span>
+          <input type="password" ng-model="config.serverToken">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Commit</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
